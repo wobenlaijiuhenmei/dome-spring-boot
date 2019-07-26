@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>我本来就很美</title>
+    <style>
+        form input,select{
+            width: 150px;
+            height: 30px;
+            margin-bottom:50px;
+        }
+        .button1 {
+            border: 0;
+            background-color: transparent;
+            outline: none;
+            width: 60px;
+            height: 30px;
+            font-size: 20px;
+            background-color: #46b8da;
+            border: 1px solid bisque;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <form th:action="add"  method="post">
+            <input type="text" name="id" placeholder="id">
+            <input type="text" name="names" placeholder="姓名">
+            <input type="text" name="sex" placeholder="性别">
+            <input type="text" name="age" placeholder="年龄">
+            <input type="text" name="role" placeholder="身份">
+            <button type="submit" class="button1"> 上传</button>
+        </form>
+        <br>
+        <p>---------------------------------我是一条强势的分割线---------------------------------------</p>
+        <br><br><br>
+        <form th:action="del" method="post">
+            <input type="text" name="id" placeholder="请输入您要删除的id">
+            <button type="submit">删除</button>
+        </form>
+        <br><br><br>
+        <p>---------------------------------我是第二条强势的分割线---------------------------------------</p>
+        <form th:action="gai" method="post">
+            <p>根据id修改年龄</p>
+            <p>我需要把id为
+                <input type="text"  name="id" placeholder="1">修改为
+                <input type="text"  name="age" placeholder="18">岁</p>
+            <button type="submit">修改</button>
+        </form>
+    </center>
+</body>
+</html>

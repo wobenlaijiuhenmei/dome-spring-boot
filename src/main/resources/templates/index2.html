@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>我本来就很美</title>
+    <style>
+        form input,select{
+            width: 150px;
+            height: 30px;
+            margin-bottom:50px;
+        }
+        .button1 {
+            width: 60px;
+            height: 25px;
+            font-size: 12px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <center>
+        <form th:action="geng"  method="post">
+            <input type="text" name="id" placeholder="id">
+            <input type="text" name="names" placeholder="姓名">
+<!--            <select name="sex" >-->
+<!--                <option value="女">女</option>-->
+<!--                <option value="男">男</option>-->
+<!--            </select>-->
+            <input type="text" name="sex" placeholder="性别">
+            <input type="text" name="age" placeholder="年龄">
+            <input type="text" name="role" placeholder="身份">
+            <button type="submit" >修改</button>
+        </form>
+    </center>
+</body>
+</html>
